@@ -7,7 +7,7 @@ const calcCellSize = (nRows, nCols) => {
   return min([rowCellSize, colCellSize]);
 };
 
-export const makeCircleGride = (nRows, nCols, circleSizePerc = 0.8, nScl = 0.003) => {
+export const makeCircleGrid = (nRows, nCols, circleSizePerc = 0.8, nScl = 0.003) => {
   const cellSize = calcCellSize(nRows, nCols);
   const w = cellSize * nCols;
   const h = cellSize * nRows;

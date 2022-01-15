@@ -1,4 +1,4 @@
-import { makeCircleGride } from './src/makeCircleGrid.js';
+import { makeCircleGrid } from './src/makeCircleGrid.js';
 import { positionCanvas } from './src/positionCanvas.js';
 
 let cnv;
@@ -27,11 +27,11 @@ window.draw = () => {
   background(255);
   rect(0, 0, width, height);
 
-  const circles = makeCircleGride(
+  const circles = makeCircleGrid(
     floor(nRowsSlider.value()),
     floor(nColsSlider.value()),
     circleSizeSlider.value() / 100,
-    map(nSclSlider.value(), 0, 32, 0.0001, 0.001),
+    map(nSclSlider.value(), 0, 32, 0.0001, 0.003),
   );
 
   circles.forEach((c) => c.draw());
